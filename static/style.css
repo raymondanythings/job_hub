@@ -1,0 +1,109 @@
+@import "reset.css";
+@import "main.css";
+
+body {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border-radius: 40%;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 500px rgba(0, 0, 0, 0.8);
+  z-index: -1;
+
+  border: transparent;
+}
+#home-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  opacity: 0.8;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 20%;
+  font-size: 200px;
+}
+
+.header_title {
+  font-size: 1em;
+}
+
+.title {
+  text-shadow: 6px 2px 2px gray;
+}
+
+.white {
+  color: white;
+}
+
+.mint {
+  color: mediumaquamarine;
+}
+
+.pink {
+  color: pink;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.green {
+  color: lawngreen;
+}
+.blue {
+  color: dodgerblue;
+}
+#main-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 20%;
+}
+
+#main-home__form {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 30%;
+  height: 40%;
+}
+
+#form-input {
+  width: 100%;
+  height: 60%;
+  border-radius: 50px;
+  padding: 0 30px;
+}
+
+.search-btn {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  font-size: 20px;
+  background-color: transparent;
+  opacity: 0.2;
+  transition: opacity 0.3s ease-in-out;
+}
+.search-btn:hover {
+  opacity: 0.8;
+}
+
+.search-btn:active {
+  transform: scale(0.8);
+}

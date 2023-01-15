@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobhub | {{name}}</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Prompt:wght@200;300;400;500;600;900&display=swap" />
+    <link rel=" stylesheet" href="{{ url_for('static', filename='read.css') }}" />
+    </link>
+</head>
+
+<body>
+    <header id="header-con">
+        <div class="home-icon">
+            <a href="/">
+                <i class="fas fa-home white icon-hover"></i>
+            </a>
+        </div>
+        <h3 id="header-name">{{name}}
+        </h3>
+        <div class="header__export">
+            <a href="/export?job={{name}}" class="white icon-hover">Export to CSV</a>
+        </div>
+    </header>
+    <main>
+        <div class="list-con">
+            <ul class="job_list">
+                {% for job in jobs %}
+                <li class="list">
+                    <h3>
+                        <a href="{{job['link']}}" target="_blank" class="link">{{job['title']}}</a>
+                    </h3>
+                    <h4 class="list__subs">{{job["company"]}} · {{job["time"]}}</h4>
+                </li>
+                <hr>
+
+                {% endfor %}
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p class="copyright">© Raymond Anything 2021</p>
+    </footer>
+    <span class="result">Find : {{num}} Results</span>
+    <script src="https://kit.fontawesome.com/9c150e0bb6.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

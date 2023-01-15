@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jobhub</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Prompt:wght@200;300;400;500;600;900&display=swap" />
+  <link rel=" stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+  <div id="circle"></div>
+  <img id="home-back" src="{{ url_for('static', filename='assets/home.jpeg') }}" />
+  <header class="header">
+    <span class="header_title">
+      <span class="title white">J</span>
+      <span class="title mint">O</span>
+      <span class="title pink">B</span>
+      <span class="title yellow">H</span>
+      <span class="title green">U</span>
+      <span class="title blue">B</span>
+    </span>
+  </header>
+  <main id="main-home">
+    <form id="main-home__form" action="/search" method="GET">
+      <input id="form-input" type="text" name="job" placeholder="Type to title in English...." required />
+      <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+    </form>
+  </main>
+  <script src="https://kit.fontawesome.com/9c150e0bb6.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+:root {
+  --basic-backgorund: #rgba(255, 255, 255, 0.089);
+  --input-shadow: 0 0 100px rgba(184, 243, 23, 0.363);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Anton", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: #22282d;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+button,
+button:hover,
+button:focus {
+  outline: none;
+  border: none;
+}
+
+input[type="submit"],
+button {
+  cursor: pointer;
+}
