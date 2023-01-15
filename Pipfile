@@ -6,8 +6,11 @@ name = "pypi"
 [packages]
 flask = "*"
 gunicorn = "*"
+bs4 = "*"
+requests = "*"
+beautifulsoup4 = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.9"
+python_version = "3.11"
