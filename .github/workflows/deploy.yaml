@@ -20,16 +20,4 @@ jobs:
           token: ${{ secrets.CLOUDTYPE_TOKEN }}
           project: raymondanythings/jobhub
           stage: main
-          yaml: |
-            name: job-hub
-            app: python@3.9
-            options:
-              env:
-                - name: FLASK_ENV
-                  value: production
-              ports: 5000
-              start: gunicorn -b 0.0.0.0:5000 main:app
-            context:
-              git:
-                url: git@github.com:${{ github.repository }}.git
-                ref: ${{ github.ref }}
+          file: ./cloudtype/deploy.yaml
